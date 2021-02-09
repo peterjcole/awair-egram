@@ -1,0 +1,22 @@
+{
+  "name": "awair-egram",
+  "version": "1.0.0",
+  "description": "Awair -> Telegram",
+  "main": "api/poll.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterjcole/awair-egram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterjcole/awair-egram/issues"
+  },
+  "homepage": "https://github.com/peterjcole/awair-egram#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
