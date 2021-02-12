@@ -1,10 +1,8 @@
 const axios = require('axios')
 
 module.exports = (req, res) => {
-  res.send()
-
-  const time = new Date()
-  if (time.getUTCHours() >= 7 && date.getUTCHours() <= 19) {
+  const date = new Date()
+  if (date.getUTCHours() >= 7 && date.getUTCHours() <= 19) {
     const awairDataUrl = encodeURI(`https://developer-apis.awair.is/v1/users/self/devices/${process.env.AWAIR_DEVICE_TYPE}/${process.env.AWAIR_DEVICE_ID}/air-data/latest`)
 
     axios.get(awairDataUrl, {
@@ -15,8 +13,8 @@ module.exports = (req, res) => {
       const co2Level = awairRes.data.data[0].sensors.find(sensor => sensor.comp === 'co2').value
       if (co2Level >= 600) {
         await messageTelegram(co2Level)
-        res.send()
       }
+      res.send()
     })
   }
 }
